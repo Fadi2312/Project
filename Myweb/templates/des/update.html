@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Add Cours</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="{% static 'css/style.css'%}">
+
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+      <a href="home.html" class="logo">Educa.</a>
+
+     
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn"   class="fa fa-plus" ></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+      <div class="profile">
+         <img src="{% static 'images/pic-1.jpg'%}" class="image" alt="">
+         
+         <p class="role">What do want to Add ? </p>
+         <div class="flex-btn">
+            <a href="http://127.0.0.1:8000/addC" class="option-btn">Cours</a>
+            <a href="http://127.0.0.1:8000/addQ" class="option-btn">Question</a>
+         </div>
+      </div>
+
+
+   </section>
+
+</header>       
+
+<div class="side-bar">
+
+<div id="close-btn">
+   <i class="fas fa-times"></i>
+</div>
+
+<div class="profile">
+    <img src="{% static 'image/foto.png' %}" class="image" alt="">
+    
+    <a href="http://127.0.0.1:8000/profile" class="btn">view Profil</a>
+ </div>
+ 
+
+<nav class="navbar">
+   <a href="http://127.0.0.1:8000/cours"><i class="fas fa-graduation-cap"></i><span>courses</span></a>
+   <a href="http://127.0.0.1:8000/question"><i class="fas fa-question"></i><span>Questions</span></a>
+   <a href="http://127.0.0.1:8000/dep"><i class="fas fa-chalkboard-user"></i><span>Dipartement</span></a>
+   <a href="http://127.0.0.1:8000/ann"><i class="fas fa-chalkboard-user"></i><span>Annonecement</span></a>
+   <a href="http://127.0.0.1:8000/comtact"><i class="fas fa-headset"></i><span>contact us</span></a>
+</nav>
+
+</div>
+
+<section class="form-container">
+
+   <form action="" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <h3>update profile</h3>
+      <div class="form-group mt-3">
+      <p>EMAIL<title>
+      </title> <span>*</span></p>
+      <input type="text" name="email" placeholder="..." required maxlength="50" class="box">
+      <p>matrecule<span>*</span></p>
+      <input type="text" name="matrecule" placeholder="..." required maxlength="1000" class="box">
+      <p>passeword</Title><span>*</span></p>
+      <input type="text" name="passeword " placeholder="..." required maxlength="50" class="box">
+      <p>confirmer passeword <span>*</span></p>
+      <input type="text" name="passeword1 " placeholder="..." required maxlength="50" class="box">
+      <input type="submit"  value="update" name="submit" class="btn">
+   </form>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="{% static 'js/script.js'%}"></script>
+
+   
+</body>
+</html>

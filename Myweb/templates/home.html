@@ -1,0 +1,163 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page garde</title>
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <section class="header">
+        
+       <div class="text-box">
+        <h1>Educational website based on<br> techniques Of artificial intelligence </h1>
+        <p> Don't miss this opportunity - join us!</p>
+        <a href="http://127.0.0.1:8000/conecter" class="hero-btn">Join us</a>
+ 
+       </div>  
+    </section>
+           <section>
+            <div class="footer">
+                <h1>Top Dipartements</h1><br>
+                <p>Welcom Dier Student,here is the meeting place of various Dipartement In UBMA</p>
+                <p>You can find courses And Questions only for these Dipartements</p>
+
+            </div>
+              <div class="slider">
+                <div class="slider-items">
+                    <div  class="item active">
+                       <img src="{% static 'img/slide1.jpeg'%}" />
+                       <div class="caption">
+                          Informatique
+                       </div>
+                    </div>
+                    <div  class="item">
+                       <img src="{% static 'img/slide2.jpg'%}" />
+                       <div class="caption">
+                        Science technologies
+                       </div>
+                    </div>
+                    <div  class="item">
+                       <img src="{% static 'img/slide3.jpg'%}" />
+                       <div class="caption">
+                        Science matiere
+                       </div>
+                    </div>
+                    <div  class="item">
+                        <img src="{% static 'img/slide4.jpg'%}" />
+                        <div class="caption">
+                         Math
+                        </div>
+                     </div>
+                     <div  class="item">
+                        <img src="{% static 'img/slide5.jpg'%}" />
+                        <div class="caption">
+                         Sports
+                        </div>
+                     </div>
+                     <div  class="item">
+                        <img src="{% static 'img/slide6.jpg'%}" />
+                        <div class="caption">
+                         Biologies
+                        </div>
+                     </div>
+           
+           
+          
+                </div>
+                  <!-- slider controls -->
+                    <div class="left-slide"><</div>
+                    <div class="right-slide">></div>
+                  <!-- slider controls -->
+             </div>
+           </section>
+       
+
+            <section>
+                <div class="section">
+                    <div class="container">
+                        <div class="content-section">
+                            <div class="title">
+                                <h1>Website content</h1>
+                            </div>
+                            <div class="content">
+                                <h3>Various Dipartements in a small village</h3>
+                                <p>We did this work by embodying the idea of enabling students who study in different Dipartements
+                                    to communicate and exchange scientific ideas,
+                                    and to develop lessons and educational sessions for the benefit of all,
+                                     and to facilitate the receipt of information.</p>
+                                <div class="button">
+                                    <a href="https://techbear.com/13-advantages-of-a-well-structured-website-in-the-education-sector/">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-section">
+                            <img src="image/imgess.JPEG">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+        <section class="footer">
+                <h4>About Us</h4>
+                <p>Thank you for visiting the website,I hope for your support<br>and participation in the website as an encouragement to us</p>
+                <div class="icons">
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-twitter"></i></a> 
+                    <a href=""><i class="fa fa-instagram"></i></a> 
+                    <a href=""><i class="fa fa-linkedin"></i></a> 
+                    <a href=""><i class="fa fa-youtube"></i></a> 
+                </div>
+                <P>Made with <i class="fa fa-heart-o"></i> by issam and fadi</P>
+                <p>Email  : issampappe23@gmail.com</p>
+                <p>Email 2: fadiallal23000@gmail.com</p>
+                <p>Phone : 06-98-16-17-72</p>
+        </section>
+  
+                       <script>
+                        
+                            var slides=document.querySelector('.slider-items').children;
+                            var nextSlide=document.querySelector(".right-slide");
+                            var prevSlide=document.querySelector(".left-slide");
+                            var totalSlides=slides.length;
+                            var index=0;
+                            nextSlide.onclick=function () {
+                                next("next");
+                           }
+                           prevSlide.onclick=function () {
+                                next("prev");
+                           }
+                           
+                           function next(direction){
+                           
+                              if(direction=="next"){
+                                 index++;
+                                  if(index==totalSlides){
+                                   index=0;
+                                  }
+                              } 
+                              else{
+                                      if(index==0){
+                                       index=totalSlides-1;
+                                      }
+                                      else{
+                                       index--;
+                                      }
+                               }
+                           
+                             for(i=0;i<slides.length;i++){
+                                     slides[i].classList.remove("active");
+                             }
+                             slides[index].classList.add("active");     
+                           
+                           }
+
+                       </script>
+   </body>
+   </html>
